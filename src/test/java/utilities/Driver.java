@@ -9,9 +9,10 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
     private static WebDriver driver;
 
-    private Driver(){}
+    private Driver() {
+    }
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -21,8 +22,8 @@ public class Driver {
         return driver;
     }
 
-    public static void quitDriver(){
-        if (driver != null){
+    public static void quitDriver() {
+        if (driver != null) {
             driver.manage().deleteAllCookies();
             driver.quit();
             driver = null;
