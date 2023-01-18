@@ -19,10 +19,10 @@ public class TechGlobalBasePage {
     public WebElement logo;
 
     @FindBy(id = "dropdown-button")
-    public WebElement headerDropDown;
+    public WebElement headerDropdown;
 
     @FindBy(css = "#dropdown-menu a")
-    public List<WebElement> headerDropDownOptions;
+    public List<WebElement> headerDropdownOptions;
 
 
 }

@@ -8,23 +8,21 @@ import utilities.Driver;
 import java.util.List;
 
 public class TechGlobalFrontendTestingHomePage extends TechGlobalBasePage {
-
     public TechGlobalFrontendTestingHomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    //Locate all the unique elements from this page
-
-    @FindBy(css = "div[id*='card']")
+    //Locate all the unique elements for this page
+    @FindBy(css = "div[id^='card']")
     public List<WebElement> cards;
 
 
-    public void getFrontendTestingPage(){
-        headerDropDown.click();
-        headerDropDownOptions.get(0).click();
+    public void getFrontendTestingPage() {
+        headerDropdown.click();
+        headerDropdownOptions.get(0).click();
     }
 
-    public void clickOnCard(String cardText){
+    public void clickOnCard(String cardText) {
         for (WebElement card : cards) {
             if (card.getText().equals(cardText)) {
                 card.click();
@@ -33,8 +31,7 @@ public class TechGlobalFrontendTestingHomePage extends TechGlobalBasePage {
         }
     }
 
-    public void clickOnCard( int index){
-       cards.get(index).click();
+    public void clickOnCard(int index) {
+        cards.get(index).click();
     }
-
 }
