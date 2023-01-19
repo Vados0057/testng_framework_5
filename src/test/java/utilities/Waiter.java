@@ -12,8 +12,15 @@ public class Waiter {
 
     }
 
-
     public static void waitForVisibilityOfElement(WebElement element, int seconds){
         new WebDriverWait(Driver.getDriver(), seconds).until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static void waitForElementToBeClickable(WebElement element, int seconds){
+        new WebDriverWait(Driver.getDriver(), seconds).until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static void waitForElement(String title, int seconds){
+        new WebDriverWait(Driver.getDriver(), seconds).until(ExpectedConditions.titleIs(title));
     }
 }
