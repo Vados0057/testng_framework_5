@@ -32,20 +32,20 @@ public class TechGlobalRadioButtonTest extends TechGlobalBase {
     techGlobalFrontendTestingHomePage.getFrontendTestingPage();
     techGlobalFrontendTestingHomePage.clickOnCard(5);
 
-        for (WebElement element : techGlobalRadioButtonsPage.firstBlock) {
+        for (WebElement element : techGlobalRadioButtonsPage.firstBlockLabel) {
             Assert.assertTrue(element.isDisplayed());
             Assert.assertTrue(element.isEnabled());
             Assert.assertFalse(element.isSelected());
         }
 
-        techGlobalRadioButtonsPage.firstBlockInput.get(0).click();
+        techGlobalRadioButtonsPage.firstBlockLabel.get(0).click();
         Waiter.pause(2);
 
         Assert.assertTrue(techGlobalRadioButtonsPage.firstBlockInput.get(0).isSelected());
         Assert.assertFalse(techGlobalRadioButtonsPage.firstBlockInput.get(1).isSelected());
         Assert.assertFalse(techGlobalRadioButtonsPage.firstBlockInput.get(2).isSelected());
 
-        techGlobalRadioButtonsPage.firstBlockInput.get(1).click();
+        techGlobalRadioButtonsPage.firstBlockLabel.get(1).click();
         Waiter.pause(2);
 
         Assert.assertFalse(techGlobalRadioButtonsPage.firstBlockInput.get(0).isSelected());
@@ -58,24 +58,24 @@ public class TechGlobalRadioButtonTest extends TechGlobalBase {
         techGlobalFrontendTestingHomePage.getFrontendTestingPage();
         techGlobalFrontendTestingHomePage.clickOnCard(5);
 
-        for (WebElement element : techGlobalRadioButtonsPage.secondBlock) {
+        for (WebElement element : techGlobalRadioButtonsPage.secondBlockLabel) {
             Assert.assertTrue(element.isDisplayed());
             Assert.assertTrue(element.isEnabled());
             Assert.assertFalse(element.isSelected());
         }
-        techGlobalRadioButtonsPage.secondBlockInput.get(0).click();
-        Waiter.pause(2);
-
-        Assert.assertTrue(techGlobalRadioButtonsPage.secondBlockInput.get(0).isSelected());
-        Assert.assertFalse(techGlobalRadioButtonsPage.secondBlockInput.get(1).isSelected());
-        Assert.assertFalse(techGlobalRadioButtonsPage.secondBlockInput.get(2).isSelected());
-
-        techGlobalRadioButtonsPage.secondBlockInput.get(1).click();
+        techGlobalRadioButtonsPage.secondBlockLabel.get(1).click();
         Waiter.pause(2);
 
         Assert.assertFalse(techGlobalRadioButtonsPage.secondBlockInput.get(0).isSelected());
         Assert.assertTrue(techGlobalRadioButtonsPage.secondBlockInput.get(1).isSelected());
         Assert.assertFalse(techGlobalRadioButtonsPage.secondBlockInput.get(2).isSelected());
+
+        techGlobalRadioButtonsPage.secondBlockLabel.get(2).click();
+        Waiter.pause(2);
+
+        Assert.assertFalse(techGlobalRadioButtonsPage.secondBlockInput.get(0).isSelected());
+        Assert.assertFalse(techGlobalRadioButtonsPage.secondBlockInput.get(1).isSelected());
+        Assert.assertTrue(techGlobalRadioButtonsPage.secondBlockInput.get(2).isSelected());
 
     }
 

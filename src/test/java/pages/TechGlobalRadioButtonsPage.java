@@ -14,13 +14,13 @@ public class TechGlobalRadioButtonsPage extends TechGlobalBasePage{
 
 
     @FindBy(css = "#radio-button-group_1 label")
-    public List<WebElement> firstBlock;
+    public List<WebElement> firstBlockLabel;
 
     @FindBy(css = "#radio-button-group_1 input")
     public List<WebElement> firstBlockInput;
 
-    @FindBy(id = "radio-button-group_2")
-    public List<WebElement> secondBlock;
+    @FindBy(css = "#radio-button-group_2 label")
+    public List<WebElement> secondBlockLabel;
 
     @FindBy(css = "#radio-button-group_2 input")
     public List<WebElement> secondBlockInput;
