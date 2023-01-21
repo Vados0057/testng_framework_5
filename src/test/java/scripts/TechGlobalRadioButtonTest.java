@@ -29,8 +29,8 @@ public class TechGlobalRadioButtonTest extends TechGlobalBase {
 
     @Test(priority = 1)
     public void validateRadioButtons1() {
-    techGlobalFrontendTestingHomePage.getFrontendTestingPage();
-    techGlobalFrontendTestingHomePage.clickOnCard(5);
+        techGlobalFrontendTestingHomePage.getFrontendTestingPage();
+        techGlobalFrontendTestingHomePage.clickOnCard(5);
 
         for (WebElement element : techGlobalRadioButtonsPage.firstBlockLabel) {
             Assert.assertTrue(element.isDisplayed());
@@ -54,7 +54,7 @@ public class TechGlobalRadioButtonTest extends TechGlobalBase {
     }
 
     @Test(priority = 2)
-    public void validateRadioButtons2(){
+    public void validateRadioButtons2() {
         techGlobalFrontendTestingHomePage.getFrontendTestingPage();
         techGlobalFrontendTestingHomePage.clickOnCard(5);
 

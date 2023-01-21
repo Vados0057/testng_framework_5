@@ -6,17 +6,17 @@ import org.testng.annotations.Test;
 import pages.TechGlobalFrontendTestingHomePage;
 import utilities.Waiter;
 
-public class TechGlobalFrontendTestingHomeTest extends TechGlobalBase{
+public class TechGlobalFrontendTestingHomeTest extends TechGlobalBase {
 
     @BeforeMethod
-    public void setPage(){
+    public void setPage() {
         techGlobalFrontendTestingHomePage = new TechGlobalFrontendTestingHomePage();
     }
 
     @Test(priority = 1, description = "Validate Frontend Testing cards")
-    public void validateFrontendTestingCards(){
-       techGlobalFrontendTestingHomePage.getFrontendTestingPage();
-        String[] cardTexts =  {"Locators",
+    public void validateFrontendTestingCards() {
+        techGlobalFrontendTestingHomePage.getFrontendTestingPage();
+        String[] cardTexts = {"Locators",
                 "Xpath-CSS Locators",
                 "Dynamic Elements",
                 "Waits",
@@ -52,14 +52,12 @@ public class TechGlobalFrontendTestingHomeTest extends TechGlobalBase{
     */
 
     @Test(priority = 2, description = "Validate URL")
-    public void validateFrontendTestingURL(){
+    public void validateFrontendTestingURL() {
         //https://techglobal-training.netlify.app/frontend
 
         techGlobalFrontendTestingHomePage.getFrontendTestingPage();
         Assert.assertTrue(driver.getCurrentUrl().contains("frontend"));
     }
-
-
 
 
 }
