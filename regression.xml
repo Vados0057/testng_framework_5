@@ -37,6 +37,9 @@
                     <include name="validateARedBoxIsDisplayed"/>
                 </methods>
             </class>
+            <class name="scripts.TechGlobalDropdownsTest"/>
+            <class name="scripts.TechGlobalMultipleWindowsTest"/>
+            <class name="scripts.TechGlobalAlertsTest"/>
         </classes>
     </test>
 </suite>

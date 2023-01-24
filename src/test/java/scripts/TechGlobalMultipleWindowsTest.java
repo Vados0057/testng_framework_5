@@ -3,15 +3,14 @@ package scripts;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.TechGlobalDropdownsPage;
 import pages.TechGlobalFrontendTestingHomePage;
 import pages.TechGlobalMultipleWindowsPage;
-import utilities.Waiter;
+import utilities.WindowHandler;
 
-public class TechGlobalMultipleWindowsTest extends TechGlobalBase{
+public class TechGlobalMultipleWindowsTest extends TechGlobalBase {
 
     @BeforeMethod
-    public void setPage(){
+    public void setPage() {
         techGlobalFrontendTestingHomePage = new TechGlobalFrontendTestingHomePage();
         techGlobalMultipleWindowsPage = new TechGlobalMultipleWindowsPage();
 
@@ -20,24 +19,28 @@ public class TechGlobalMultipleWindowsTest extends TechGlobalBase{
     }
 
     @Test(priority = 1, description = "Validate the Apple link")
-    public void validateTheAppleLink(){
-        Waiter.pause(2);
-        //Before clicking on Apple link
-        String mainWindow = driver.getWindowHandle();
-        techGlobalMultipleWindowsPage.links.get(0).click();
-        Waiter.pause(5);
+    public void validateTheAppleLink() {
 
-        for (String windowId: driver.getWindowHandles()) {
-            if (!windowId.equals(mainWindow)){
-                driver.switchTo().window(windowId);
-                break;
-            }
-        }
+        techGlobalMultipleWindowsPage.links.get(0).click();
+        WindowHandler.switchToChildWindow();
+
         Assert.assertEquals(driver.getTitle(), "Apple");
         driver.close();
-        driver.switchTo().window(mainWindow);
 
+        WindowHandler.switchBackToParentWindow();
         Assert.assertTrue(driver.getCurrentUrl().contains("techglobal"));
+    }
 
+    @Test(priority = 2, description = "Validate link URLs")
+    public void validateLinksURLs() {
+        String mainWindow = driver.getWindowHandle();
+        String[] urls = {"https://www.apple.com/", "https://www.microsoft.com/en-us/", "https://www.tesla.com/"};
+        for (int i = 0; i < techGlobalMultipleWindowsPage.links.size(); i++) {
+            techGlobalMultipleWindowsPage.links.get(i).click();
+            WindowHandler.switchToChildWindow();
+            Assert.assertEquals(driver.getCurrentUrl(), urls[i]);
+            driver.close();
+            WindowHandler.switchBackToParentWindow();
+        }
     }
 }
