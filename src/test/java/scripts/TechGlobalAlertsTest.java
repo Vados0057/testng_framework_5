@@ -89,19 +89,14 @@ public class TechGlobalAlertsTest extends TechGlobalBase {
         Assert.assertEquals(AlertHandler.getAlertText(driver), "What would you like to say to TechGlobal?");
 
         AlertHandler.dismissAlert();
-
         Assert.assertEquals(techGlobalAlertsPage.result.getText(), "You rejected the alert by clicking Cancel.");
-
         techGlobalAlertsPage.clickOnAlert("Prompt alert");
         AlertHandler.acceptAlert();
-
         Assert.assertEquals(techGlobalAlertsPage.result.getText(), "You entered \"\" in the alert and clicked OK.");
-
         techGlobalAlertsPage.clickOnAlert("Prompt alert");
         AlertHandler.sendKeysToAlert("Hello");
-
         AlertHandler.acceptAlert();
         Assert.assertEquals(techGlobalAlertsPage.result.getText(), "You entered \"Hello\" in the alert and clicked OK.");
-
     }
+
 }

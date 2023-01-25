@@ -32,6 +32,7 @@ public class TechGlobalBase {
         techGlobalBasePage = new TechGlobalBasePage();
     }
 
+
     @AfterMethod
     public void teardown() {
         //We will quit driver and do other proper clean ups
