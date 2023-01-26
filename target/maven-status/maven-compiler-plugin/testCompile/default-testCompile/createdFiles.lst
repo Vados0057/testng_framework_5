@@ -3,8 +3,11 @@ pages/TechGlobalDynamicTablesPage.class
 utilities/DropdownHandler.class
 scripts/TechGlobalWaitsTest.class
 scripts/TechGlobalDropdownsTest.class
+testng_knowledge/_06_DataProvider.class
 pages/TechGlobalBasePage.class
 utilities/Waiter.class
+testng_knowledge/_07_Groups.class
+junit_knowledge/_01_Annotations.class
 pages/TechGlobalWaitsPage.class
 pages/TechGlobalFrontendTestingHomePage.class
 pages/TechGlobalCheckBoxPage.class
@@ -18,6 +21,7 @@ scripts/TechGlobalBase.class
 pages/TechGlobalMultipleWindowsPage.class
 pages/TechGlobalAlertsPage.class
 pages/TechGlobalDynamicElementsPage.class
+testng_knowledge/_05_SoftAssertion.class
 testng_knowledge/_01_Annotations.class
 testng_knowledge/_03_Priority_and_Dependency.class
 scripts/TechGlobalRadioButtonTest.class
