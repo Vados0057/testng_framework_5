@@ -41,7 +41,10 @@
             <class name="scripts.TechGlobalMultipleWindowsTest"/>
             <class name="scripts.TechGlobalAlertsTest"/>
             <class name="scripts.TechGlobalDynamicTablesTest"/>
-            <class name="scripts.TechGlobalIFrameTest"></class>
+            <class name="scripts.TechGlobalIFrameTest"/>
+            <class name="scripts.TechGlobalFileDownloadTest"/>
+            <class name="scripts.TechGlobalFileUploadTest"/>
+            <class name="scripts.TechGlobalStaticTablesTest"/>
         </classes>
     </test>
 </suite>

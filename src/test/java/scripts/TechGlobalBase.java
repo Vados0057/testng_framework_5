@@ -24,6 +24,7 @@ public class TechGlobalBase {
     TechGlobalIFramePage techGlobalIFramePage;
     TechGlobalFileUploadPage techGlobalFileUploadPage;
     TechGlobalFileDownloadPage techGlobalFileDownloadPage;
+    TechGlobalStaticTablesPage techGlobalStaticTablesPage;
 
     @BeforeMethod
     public void setup() {
